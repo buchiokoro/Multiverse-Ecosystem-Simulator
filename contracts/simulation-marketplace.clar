@@ -46,4 +46,35 @@
 
 (define-public (transfer-species (species-id uint) (recipient principal))
   (begin
-    (asserts! (is-eq tx-sender (unwrap! (nft-get-
+    (asserts! (is-eq tx-sender (unwrap! (nft-get-owner? species-nft species-id) ERR_INVALID_SPECIES)) ERR_NOT_AUTHORIZED)
+    (try! (nft-transfer? species-nft species-id tx-sender recipient))
+    (ok true)
+  )
+)
+
+(define-public (evolve-species (species-id uint) (new-traits (list 10 (tuple (trait (string-ascii 32)) (value (string-utf8 64))))))
+  (let
+    (
+      (species (unwrap! (map-get? species-data species-id) ERR_INVALID_SPECIES))
+    )
+    (asserts! (is-eq tx-sender (get creator species)) ERR_NOT_AUTHORIZED)
+    (ok (map-set species-data
+      species-id
+      (merge species { traits: new-traits })
+    ))
+  )
+)
+
+;; Read-only functions
+(define-read-only (get-species-data (species-id uint))
+  (map-get? species-data species-id)
+)
+
+(define-read-only (get-species-owner (species-id uint))
+  (nft-get-owner? species-nft species-id)
+)
+
+(define-read-only (get-last-species-id)
+  (var-get last-species-id)
+)
+
