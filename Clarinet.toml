@@ -5,6 +5,11 @@ authors = []
 telemetry = true
 cache_dir = './.cache'
 requirements = []
+[contracts.ai-integration]
+path = 'contracts/ai-integration.clar'
+clarity_version = 2
+epoch = 2.5
+
 [contracts.ecosystem-management]
 path = 'contracts/ecosystem-management.clar'
 clarity_version = 2

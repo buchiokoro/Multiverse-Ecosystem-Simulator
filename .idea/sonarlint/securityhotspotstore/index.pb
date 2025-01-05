@@ -13,3 +13,5 @@ J
 contracts/species-nft.clar,9/d/9d69b21e2bc8fd8d9e3441cb5ea8baa57e223fc9
 I
 tests/species-nft.test.ts,a/e/ae73b85f1c28d4cf7b6d1a823313d2abb37a3d11
+M
+contracts/ai-integration.clar,b/7/b7b9e7ace0cbbd304b57da5f202a10d9bc7cee26
