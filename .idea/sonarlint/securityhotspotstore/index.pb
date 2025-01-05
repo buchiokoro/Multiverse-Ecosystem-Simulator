@@ -5,3 +5,5 @@ S
 #contracts/ecosystem-management.clar,9/8/986bb9d0a3be27ea7c08f40168497571c2554cf8
 R
 "tests/ecosystem-management.test.ts,6/b/6beca9a302528ba627679f7c3f8374dc9649dc62
+U
+%contracts/simulation-marketplace.clar,c/2/c20a4046ad528017fd2d3ea229adb0e6ff7b1ce6
