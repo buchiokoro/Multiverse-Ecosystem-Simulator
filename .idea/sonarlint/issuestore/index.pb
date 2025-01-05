@@ -15,3 +15,5 @@ I
 tests/species-nft.test.ts,a/e/ae73b85f1c28d4cf7b6d1a823313d2abb37a3d11
 M
 contracts/ai-integration.clar,b/7/b7b9e7ace0cbbd304b57da5f202a10d9bc7cee26
+L
+tests/ai-integration.test.ts,c/2/c2e3a882f75f215a7020d4407d07f6db8398fe14
